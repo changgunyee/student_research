@@ -36,7 +36,7 @@ export default{
   },
   methods:{
     fileUpload(){
-      files={
+      this.files={
         "question_excel_file":this.$refs.question_input.files[0],
         "answer_excel_file":this.$refs.answer_input.files[0]
       }
