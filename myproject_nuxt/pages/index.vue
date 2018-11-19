@@ -31,7 +31,7 @@
 <script>
 export default{
   data(){
-    files={}
+    let files={}
     return files
   },
   methods:{
