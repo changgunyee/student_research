@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from polls.models import *
+from .models import *
 # Register your models here.
 class AnswerAdmin(admin.ModelAdmin):
     list_per_page=500

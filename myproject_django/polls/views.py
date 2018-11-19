@@ -1,5 +1,5 @@
 import pandas as pd
-from polls.models import *
+from .models import *
 from django.shortcuts import render
 def upload(request):
     question_excel_file = request.FILES.get("question_excel_file",False)
