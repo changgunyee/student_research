@@ -51,8 +51,9 @@ export default{
       data.append("answer_excel_file",this.files["answer_excel_file"])
 
       const config = {
-            headers: { 'content-type': 'multipart/form-data',
-            "X-CSRFToken": csrfToken }
+            headers: { 
+              'content-type': 'multipart/form-data'
+            }
         }
       return axios.post('https://54.180.115.81:8000/polls/upload',data,config).then(()=>{
           console.log("success")
