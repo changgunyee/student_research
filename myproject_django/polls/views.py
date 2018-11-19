@@ -1,6 +1,5 @@
-from django.urls import path
-from django.contrib import admin
-from . import views
+import pandas as pd
+from polls.models import *
 
 def upload(request):
     question_excel_file = request.FILES.get("question_excel_file",False)
@@ -29,8 +28,11 @@ def upload(request):
                 answer=Answer.objects.get(question=columns[index],answer=row[index])
                 person.answers.add(answer)
             person.save()
-    return 
+    return True
 
-#def answers_by_person(request,person_id):
-
-
+def person(request,person_id):
+    if person_id == -1:
+        persons=[]
+        for person in Person.objects.all():
+            persons.append(person.answers.objects.all())
+        return persons

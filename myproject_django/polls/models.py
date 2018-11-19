@@ -11,6 +11,14 @@ class ClassificationManager(models.Manager):
             c=self.create(section=array[0],type1=array[1],type2=array[2])
             return c
 
+class Classification(models.Model):
+    section=models.IntegerField()
+    type1=models.CharField(max_length=20)
+    type2=models.CharField(max_length=20)
+    objects=ClassificationManager()
+    def __str__(self):
+        return str(self.section)+"->"+self.type1+"->"+self.type2
+
 class QuestionManager(models.Manager):
     def create_by_arr(self,array):
         query_q=self.filter(number=array[0])
@@ -27,15 +35,6 @@ class QuestionManager(models.Manager):
             Answer.objects.create(question=q,answer=answer_type)
         return q
 
-class Classification(models.Model):
-    section=models.IntegerField()
-    type1=models.CharField(max_length=20)
-    type2=models.CharField(max_length=20)
-    objects=ClassificationManager()
-    def __str__(self):
-        return str(self.section)+"->"+self.type1+"->"+self.type2
-
-
 class Question(models.Model):
     number=models.IntegerField(primary_key=True)
     classification=models.ForeignKey(Classification,on_delete=models.CASCADE)
@@ -49,6 +48,8 @@ class Answer(models.Model):
     answer=models.CharField(max_length=20)
     def __str__(self):
         return self.answer
+
+
 
 class Person(models.Model):
     name=models.CharField(max_length=20)
