@@ -1,6 +1,6 @@
 <template>
-  <form action="54.180.115.81:8000/polls/upload" method="post" enctype="multipart/form-data">
-  
+  <form action="0.0.0.0:8000/polls/upload" method="post" enctype="multipart/form-data">
+
     <input type="file" title="Upload question excel file" name="question_excel_file" required="required">
 
     <input type="file" title="Upload answer excel file" name="answer_excel_file" required="required">
