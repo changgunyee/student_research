@@ -52,11 +52,10 @@ export default{
 
       const config = {
             headers: { 
-              'content-type': 'multipart/form-data',
-              httpsAgent:new httpsAgent({rejectUnauthorized:false})
+              'content-type': 'multipart/form-data'
             }
         }
-      return axios.post('https://54.180.115.81:8000/polls/upload',data,config).then(()=>{
+      return axios.post('http://54.180.115.81:8000/polls/upload',data,config).then(()=>{
           console.log("success")
       })
     }
