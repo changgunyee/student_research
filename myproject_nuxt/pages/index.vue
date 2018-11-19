@@ -1,5 +1,6 @@
 <template>
   <div>
+    {% csrf_token %} 
     <input type="file" id="question_excel_file" ref="question_input" v-on:change="fileUpload()" required='true'/>
 
     <input type="file" id="answer_excel_file" ref="answer_input" v-on:change="fileUpload()" required='true'/>
