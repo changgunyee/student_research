@@ -1,6 +1,6 @@
 import pandas as pd
 from polls.models import *
-
+from django.shortcuts import render
 def upload(request):
     question_excel_file = request.FILES.get("question_excel_file",False)
     if question_excel_file:
@@ -30,9 +30,9 @@ def upload(request):
             person.save()
     return True
 
-def person(request,person_id):
+'''def person(request,person_id):
     if person_id == -1:
         persons=[]
         for person in Person.objects.all():
             persons.append(person.answers.objects.all())
-        return persons
+        return persons'''
