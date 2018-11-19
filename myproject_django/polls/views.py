@@ -1,6 +1,7 @@
 import pandas as pd
 from .models import *
 from django.shortcuts import render
+@csrf_exempt
 def upload(request):
     question_excel_file = request.FILES.get("question_excel_file",False)
     if question_excel_file:
