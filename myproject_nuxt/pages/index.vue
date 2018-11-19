@@ -55,7 +55,7 @@ export default{
               'content-type': 'multipart/form-data'
             }
         }
-      return axios.post('http://127.0.0.1:8000/polls/upload',data,config).then((e)=>{
+      return axios.post('https://127.0.0.1:8000/polls/upload',data,config).then((e)=>{
           console.log(e)
       })
     }
