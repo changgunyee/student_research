@@ -1,7 +1,7 @@
 <template>
   <div>
     <input type="hidden" name="_token" :value="csrf">
-    
+
     <input type="file" id="question_excel_file" ref="question_input" v-on:change="fileUpload()" required='true'/>
 
     <input type="file" id="answer_excel_file" ref="answer_input" v-on:change="fileUpload()" required='true'/>
@@ -51,9 +51,10 @@ export default{
       data.append("answer_excel_file",this.files["answer_excel_file"])
 
       const config = {
-            headers: { 'content-type': 'multipart/form-data' }
+            headers: { 'content-type': 'multipart/form-data',
+            "X-CSRFToken": csrfToken }
         }
-      return axios.post('http://54.180.115.81:8000/polls/upload',data,config).then(()=>{
+      return axios.post('https://54.180.115.81:8000/polls/upload',data,config).then(()=>{
           console.log("success")
       })
     }
