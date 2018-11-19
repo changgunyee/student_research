@@ -1,12 +1,12 @@
 <template>
-  <form action="http://54.180.115.81:8000/polls/upload" method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-    <input type="file" title="Upload question excel file" name="question_excel_file" required="required">
-    
-    <input type="file" title="Upload answer excel file" name="answer_excel_file" required="required">
+  <div>
+    <input type="file" id="question_excel_file" ref="question_input" v-on:change="fileUpload()" required='true'/>
 
-    <input type="submit" value="Upload" style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
-  </form>
+    <input type="file" id="answer_excel_file" ref="answer_input" v-on:change="fileUpload()" required='true'/>
+
+    <button v-on:click="submitFiles()">Submit</button>
+  </div>  
+</template>
   <!--<section class="container">
     <div>
       <app-logo/>
@@ -28,4 +28,32 @@
       </div>
     </div>
   </section>-->
-</template>
+<script>
+export default{
+  data(){
+    files={}
+    return files
+  },
+  methods:{
+    fileUpload(){
+      files={
+        "question_excel_file":this.$refs.question_input.files[0],
+        "answer_excel_file":this.$refs.answer_input.files[0]
+      }
+    },
+    submitFiles(){
+      let data= new FormData()
+
+      data.append("question_excel_file",this.files["question_excel_file"])
+      data.append("answer_excel_file",this.files["answer_excel_file"])
+
+      const config = {
+            headers: { 'content-type': 'multipart/form-data' }
+        }
+      return axios.post('http://54.180.115.81:8000/polls/upload',data,config).then(()=>{
+          console.log("success")
+      })
+    }
+  }
+}
+</script>

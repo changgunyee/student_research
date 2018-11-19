@@ -1,0 +1,248 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALLOWED_HOSTS	myproject_django/myproject_django/settings.py	/^ALLOWED_HOSTS = [$/;"	kind:variable	line:28
+AUTH_PASSWORD_VALIDATORS	myproject_django/myproject_django/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	kind:variable	line:94
+Answer	myproject_django/polls/models.py	/^class Answer(models.Model):$/;"	kind:class	line:46
+AnswerAdmin	myproject_django/polls/admin.py	/^class AnswerAdmin(admin.ModelAdmin):$/;"	kind:class	line:5
+AppConfig	myproject_django/polls/apps.py	/^from django.apps import AppConfig$/;"	kind:namespace	line:1
+BASE_DIR	myproject_django/myproject_django/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:16
+Classification	myproject_django/polls/models.py	/^class Classification(models.Model):$/;"	kind:class	line:14
+ClassificationManager	myproject_django/polls/models.py	/^class ClassificationManager(models.Manager):$/;"	kind:class	line:4
+DATABASES	myproject_django/myproject_django/settings.py	/^DATABASES = {$/;"	kind:variable	line:79
+DEBUG	myproject_django/myproject_django/settings.py	/^DEBUG = True$/;"	kind:variable	line:26
+ENABLE_USER_SITE	venv/lib/python3.6/site.py	/^ENABLE_USER_SITE = None$/;"	kind:variable	line:82
+INSTALLED_APPS	myproject_django/myproject_django/settings.py	/^INSTALLED_APPS = [$/;"	kind:variable	line:35
+LANGUAGE_CODE	myproject_django/myproject_django/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	kind:variable	line:113
+MAXLINES	venv/lib/python3.6/site.py	/^    MAXLINES = 23$/;"	kind:variable	line:408
+MIDDLEWARE	myproject_django/myproject_django/settings.py	/^MIDDLEWARE = [$/;"	kind:variable	line:45
+ModuleType	venv/lib/python3.6/site.py	/^    ModuleType = type(os)$/;"	kind:variable	line:91
+PREFIXES	venv/lib/python3.6/site.py	/^PREFIXES = [sys.prefix, sys.exec_prefix]$/;"	kind:variable	line:79
+Person	myproject_django/polls/models.py	/^class Person(models.Model):$/;"	kind:class	line:54
+PollsConfig	myproject_django/polls/apps.py	/^class PollsConfig(AppConfig):$/;"	kind:class	line:4
+Question	myproject_django/polls/models.py	/^class Question(models.Model):$/;"	kind:class	line:38
+QuestionManager	myproject_django/polls/models.py	/^class QuestionManager(models.Manager):$/;"	kind:class	line:22
+Quitter	venv/lib/python3.6/site.py	/^    class Quitter(object):$/;"	kind:class	line:384
+ROOT_URLCONF	myproject_django/myproject_django/settings.py	/^ROOT_URLCONF = 'myproject_django.urls'$/;"	kind:variable	line:55
+SECRET_KEY	myproject_django/myproject_django/settings.py	/^SECRET_KEY = '8+u#9urg$a9)_%t-+)n#2t4iq7l-41f+jj*&qkv*s-t)l(iy89'$/;"	kind:variable	line:23
+STATIC_URL	myproject_django/myproject_django/settings.py	/^STATIC_URL = '\/static\/'$/;"	kind:variable	line:127
+TEMPLATES	myproject_django/myproject_django/settings.py	/^TEMPLATES = [$/;"	kind:variable	line:57
+TIME_ZONE	myproject_django/myproject_django/settings.py	/^TIME_ZONE = 'UTC'$/;"	kind:variable	line:115
+TestCase	myproject_django/polls/tests.py	/^from django.test import TestCase$/;"	kind:namespace	line:1
+USER_BASE	venv/lib/python3.6/site.py	/^USER_BASE = None$/;"	kind:variable	line:85
+USER_SITE	venv/lib/python3.6/site.py	/^USER_SITE = None$/;"	kind:variable	line:84
+USE_I18N	myproject_django/myproject_django/settings.py	/^USE_I18N = True$/;"	kind:variable	line:117
+USE_L10N	myproject_django/myproject_django/settings.py	/^USE_L10N = True$/;"	kind:variable	line:119
+USE_TZ	myproject_django/myproject_django/settings.py	/^USE_TZ = True$/;"	kind:variable	line:121
+WSGI_APPLICATION	myproject_django/myproject_django/settings.py	/^WSGI_APPLICATION = 'myproject_django.wsgi.application'$/;"	kind:variable	line:73
+_Helper	venv/lib/python3.6/site.py	/^class _Helper(object):$/;"	kind:class	line:492
+_Printer	venv/lib/python3.6/site.py	/^class _Printer(object):$/;"	kind:class	line:404
+__call__	venv/lib/python3.6/site.py	/^        def __call__(self, code=None):$/;"	kind:member	line:391
+__call__	venv/lib/python3.6/site.py	/^    def __call__(self):$/;"	kind:member	line:445
+__call__	venv/lib/python3.6/site.py	/^    def __call__(self, *args, **kwds):$/;"	kind:member	line:501
+__future__.py	venv/lib/python3.6/__future__.py	1;"	kind:file	line:1
+__init__	venv/lib/python3.6/site.py	/^        def __init__(self, name):$/;"	kind:member	line:385
+__init__	venv/lib/python3.6/site.py	/^    def __init__(self, name, data, files=(), dirs=()):$/;"	kind:member	line:410
+__init__.py	myproject_django/myproject_django/__init__.py	1;"	kind:file	line:1
+__init__.py	myproject_django/polls/__init__.py	1;"	kind:file	line:1
+__init__.py	myproject_django/polls/migrations/__init__.py	1;"	kind:file	line:1
+__init__.py	venv/lib/python3.6/distutils/__init__.py	1;"	kind:file	line:1
+__repr__	venv/lib/python3.6/site.py	/^        def __repr__(self):$/;"	kind:member	line:388
+__repr__	venv/lib/python3.6/site.py	/^    def __repr__(self):$/;"	kind:member	line:438
+__repr__	venv/lib/python3.6/site.py	/^    def __repr__(self):$/;"	kind:member	line:498
+__revision__	venv/lib/python3.6/distutils/__init__.py	/^        __revision__ = real_distutils.__revision__$/;"	kind:variable	line:21
+__setup	venv/lib/python3.6/site.py	/^    def __setup(self):$/;"	kind:member	line:417
+__str__	myproject_django/polls/models.py	/^    def __str__(self):$/;"	kind:member	line:19
+__str__	myproject_django/polls/models.py	/^    def __str__(self):$/;"	kind:member	line:43
+__str__	myproject_django/polls/models.py	/^    def __str__(self):$/;"	kind:member	line:49
+__str__	myproject_django/polls/models.py	/^    def __str__(self):$/;"	kind:member	line:58
+__version__	venv/lib/python3.6/distutils/__init__.py	/^    __version__ = real_distutils.__version__$/;"	kind:variable	line:24
+_bootlocale.py	venv/lib/python3.6/_bootlocale.py	1;"	kind:file	line:1
+_collections_abc.py	venv/lib/python3.6/_collections_abc.py	1;"	kind:file	line:1
+_dummy_thread.py	venv/lib/python3.6/_dummy_thread.py	1;"	kind:file	line:1
+_init_pathinfo	venv/lib/python3.6/site.py	/^def _init_pathinfo():$/;"	kind:function	line:148
+_is_64bit	venv/lib/python3.6/site.py	/^_is_64bit = (getattr(sys, "maxsize", None) or getattr(sys, "maxint")) > 2 ** 32$/;"	kind:variable	line:87
+_is_pypy	venv/lib/python3.6/site.py	/^_is_pypy = hasattr(sys, "pypy_version_info")$/;"	kind:variable	line:88
+_script	venv/lib/python3.6/site.py	/^def _script():$/;"	kind:function	line:776
+_weakrefset.py	venv/lib/python3.6/_weakrefset.py	1;"	kind:file	line:1
+abc.py	venv/lib/python3.6/abc.py	1;"	kind:file	line:1
+abs__file__	venv/lib/python3.6/site.py	/^def abs__file__():$/;"	kind:function	line:102
+activate_this.py	venv/bin/activate_this.py	1;"	kind:file	line:1
+addbuilddir	venv/lib/python3.6/site.py	/^def addbuilddir():$/;"	kind:function	line:136
+addpackage	venv/lib/python3.6/site.py	/^def addpackage(sitedir, name, known_paths):$/;"	kind:function	line:161
+addsitedir	venv/lib/python3.6/site.py	/^def addsitedir(sitedir, known_paths=None):$/;"	kind:function	line:193
+addsitepackages	venv/lib/python3.6/site.py	/^def addsitepackages(known_paths, sys_prefix=sys.prefix, exec_prefix=sys.exec_prefix):$/;"	kind:function	line:217
+addusersitepackages	venv/lib/python3.6/site.py	/^def addusersitepackages(known_paths):$/;"	kind:function	line:309
+admin	myproject_django/myproject_django/urls.py	/^from django.contrib import admin$/;"	kind:namespace	line:16
+admin	myproject_django/polls/admin.py	/^from django.contrib import admin$/;"	kind:namespace	line:1
+admin.py	myproject_django/polls/admin.py	1;"	kind:file	line:1
+aliasmbcs	venv/lib/python3.6/site.py	/^def aliasmbcs():$/;"	kind:function	line:511
+answer	myproject_django/polls/models.py	/^    answer=models.CharField(max_length=20)$/;"	kind:variable	line:48
+answers	myproject_django/polls/models.py	/^    answers=models.ManyToManyField(Answer)$/;"	kind:variable	line:57
+app_name	myproject_django/polls/urls.py	/^app_name='polls'$/;"	kind:variable	line:4
+application	myproject_django/myproject_django/wsgi.py	/^application = get_wsgi_application()$/;"	kind:variable	line:16
+apps.py	myproject_django/polls/apps.py	1;"	kind:file	line:1
+atexit	venv/lib/python3.6/site.py	/^        import atexit$/;"	kind:namespace	line:686
+base	venv/bin/activate_this.py	/^base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:20
+base64.py	venv/lib/python3.6/base64.py	1;"	kind:file	line:1
+basestring	venv/lib/python3.6/distutils/__init__.py	/^    basestring = str$/;"	kind:variable	line:31
+bisect.py	venv/lib/python3.6/bisect.py	1;"	kind:file	line:1
+build_ext	venv/lib/python3.6/distutils/__init__.py	/^    class build_ext(old_build_ext):$/;"	kind:class	line:39
+build_ext_module	venv/lib/python3.6/distutils/__init__.py	/^    from distutils.command import build_ext as build_ext_module$/;"	kind:namespace	line:49
+builtins	venv/lib/python3.6/site.py	/^    import __builtin__ as builtins$/;"	kind:namespace	line:70
+builtins	venv/lib/python3.6/site.py	/^    import builtins$/;"	kind:namespace	line:72
+check_enableusersite	venv/lib/python3.6/site.py	/^def check_enableusersite():$/;"	kind:function	line:284
+classification	myproject_django/polls/models.py	/^    classification=models.ForeignKey(Classification,on_delete=models.CASCADE)$/;"	kind:variable	line:40
+codecs	venv/lib/python3.6/site.py	/^        import locale, codecs$/;"	kind:namespace	line:516
+codecs.py	venv/lib/python3.6/codecs.py	1;"	kind:file	line:1
+copy.py	venv/lib/python3.6/copy.py	1;"	kind:file	line:1
+copyreg.py	venv/lib/python3.6/copyreg.py	1;"	kind:file	line:1
+create_by_arr	myproject_django/polls/models.py	/^    def create_by_arr(self,array):$/;"	kind:member	line:23
+create_by_arr	myproject_django/polls/models.py	/^    def create_by_arr(self,array):$/;"	kind:member	line:5
+dirname	venv/lib/python3.6/distutils/__init__.py	/^dirname = os.path.dirname$/;"	kind:variable	line:11
+dist	venv/lib/python3.6/distutils/__init__.py	/^from distutils import dist, sysconfig  # isort:skip$/;"	kind:namespace	line:26
+distutils_path	venv/lib/python3.6/distutils/__init__.py	/^distutils_path = os.path.join(os.path.dirname(opcode.__file__), "distutils")$/;"	kind:variable	line:13
+django-admin.py	venv/bin/django-admin.py	1;"	kind:file	line:1
+email	myproject_django/polls/models.py	/^    email=models.CharField(max_length=100)$/;"	kind:variable	line:56
+enablerlcompleter	venv/lib/python3.6/site.py	/^def enablerlcompleter():$/;"	kind:function	line:676
+encodings	venv/lib/python3.6/site.py	/^                import encodings$/;"	kind:namespace	line:523
+enum.py	venv/lib/python3.6/enum.py	1;"	kind:file	line:1
+execsitecustomize	venv/lib/python3.6/site.py	/^def execsitecustomize():$/;"	kind:function	line:550
+execusercustomize	venv/lib/python3.6/site.py	/^def execusercustomize():$/;"	kind:function	line:668
+execute_from_command_line	myproject_django/manage.py	/^        from django.core.management import execute_from_command_line$/;"	kind:namespace	line:8
+exists	venv/lib/python3.6/site.py	/^        def exists(path):$/;"	kind:function	line:798
+exit_with_usage	venv/bin/python-config	/^def exit_with_usage(code=1):$/;"	kind:function	line:17
+finalize_options	venv/lib/python3.6/distutils/__init__.py	/^        def finalize_options(self):$/;"	kind:member	line:40
+find_config_files	venv/lib/python3.6/distutils/__init__.py	/^def find_config_files(self):$/;"	kind:function	line:58
+fixclasspath	venv/lib/python3.6/site.py	/^def fixclasspath():$/;"	kind:function	line:653
+fnmatch.py	venv/lib/python3.6/fnmatch.py	1;"	kind:file	line:1
+force_global_eggs_after_local_site_packages	venv/lib/python3.6/site.py	/^def force_global_eggs_after_local_site_packages():$/;"	kind:function	line:632
+functools.py	venv/lib/python3.6/functools.py	1;"	kind:file	line:1
+genericpath.py	venv/lib/python3.6/genericpath.py	1;"	kind:file	line:1
+get_platform	venv/lib/python3.6/site.py	/^    from distutils.util import get_platform$/;"	kind:namespace	line:139
+get_wsgi_application	myproject_django/myproject_django/wsgi.py	/^from django.core.wsgi import get_wsgi_application$/;"	kind:namespace	line:12
+getopt	venv/bin/python-config	/^import getopt$/;"	kind:namespace	line:4
+getvar	venv/bin/python-config	/^getvar = sysconfig.get_config_var$/;"	kind:variable	line:31
+hashlib.py	venv/lib/python3.6/hashlib.py	1;"	kind:file	line:1
+heapq.py	venv/lib/python3.6/heapq.py	1;"	kind:file	line:1
+hmac.py	venv/lib/python3.6/hmac.py	1;"	kind:file	line:1
+imp	venv/lib/python3.6/distutils/__init__.py	/^import imp$/;"	kind:namespace	line:1
+imp.py	venv/lib/python3.6/imp.py	1;"	kind:file	line:1
+include	myproject_django/myproject_django/urls.py	/^from django.urls import include,path$/;"	kind:namespace	line:17
+io.py	venv/lib/python3.6/io.py	1;"	kind:file	line:1
+isort	venv/lib/python3.6/distutils/__init__.py	/^from distutils import dist, sysconfig  # isort:skip$/;"	kind:namespace	line:26
+joinuser	venv/lib/python3.6/site.py	/^    def joinuser(*args):$/;"	kind:function	line:324
+keyword.py	venv/lib/python3.6/keyword.py	1;"	kind:file	line:1
+linecache.py	venv/lib/python3.6/linecache.py	1;"	kind:file	line:1
+list_per_page	myproject_django/polls/admin.py	/^    list_per_page=500$/;"	kind:variable	line:6
+locale	venv/lib/python3.6/site.py	/^        import locale$/;"	kind:namespace	line:536
+locale	venv/lib/python3.6/site.py	/^        import locale, codecs$/;"	kind:namespace	line:516
+locale.py	venv/lib/python3.6/locale.py	1;"	kind:file	line:1
+main	venv/lib/python3.6/site.py	/^def main():$/;"	kind:function	line:736
+makepath	venv/lib/python3.6/site.py	/^def makepath(*paths):$/;"	kind:function	line:94
+manage.py	myproject_django/manage.py	1;"	kind:file	line:1
+management	venv/bin/django-admin.py	/^from django.core import management$/;"	kind:namespace	line:2
+models	myproject_django/polls/models.py	/^from django.db import models$/;"	kind:namespace	line:1
+models.py	myproject_django/polls/models.py	1;"	kind:file	line:1
+name	myproject_django/polls/apps.py	/^    name = 'polls'$/;"	kind:variable	line:5
+name	myproject_django/polls/models.py	/^    name=models.CharField(max_length=20)$/;"	kind:variable	line:55
+new_sys_path	venv/bin/activate_this.py	/^new_sys_path = []$/;"	kind:variable	line:31
+ntpath.py	venv/lib/python3.6/ntpath.py	1;"	kind:file	line:1
+number	myproject_django/polls/models.py	/^    number=models.IntegerField(primary_key=True)$/;"	kind:variable	line:39
+objects	myproject_django/polls/models.py	/^    objects=ClassificationManager()$/;"	kind:variable	line:18
+objects	myproject_django/polls/models.py	/^    objects=QuestionManager()$/;"	kind:variable	line:42
+old_build_ext	venv/lib/python3.6/distutils/__init__.py	/^    from distutils.command.build_ext import build_ext as old_build_ext$/;"	kind:namespace	line:37
+old_find_config_files	venv/lib/python3.6/distutils/__init__.py	/^old_find_config_files = dist.Distribution.find_config_files$/;"	kind:variable	line:55
+old_get_config_vars	venv/lib/python3.6/distutils/__init__.py	/^old_get_config_vars = sysconfig.get_config_vars$/;"	kind:variable	line:101
+old_get_python_inc	venv/lib/python3.6/distutils/__init__.py	/^old_get_python_inc = sysconfig.get_python_inc$/;"	kind:variable	line:77
+old_get_python_lib	venv/lib/python3.6/distutils/__init__.py	/^old_get_python_lib = sysconfig.get_python_lib$/;"	kind:variable	line:89
+old_os_path	venv/bin/activate_this.py	/^old_os_path = os.environ.get("PATH", "")$/;"	kind:variable	line:18
+opcode	venv/lib/python3.6/distutils/__init__.py	/^import opcode$/;"	kind:namespace	line:9
+operator.py	venv/lib/python3.6/operator.py	1;"	kind:file	line:1
+opt_flags	venv/bin/python-config	/^opt_flags = [flag for (flag, val) in opts]$/;"	kind:variable	line:33
+os	myproject_django/manage.py	/^import os$/;"	kind:namespace	line:2
+os	myproject_django/myproject_django/settings.py	/^import os$/;"	kind:namespace	line:13
+os	myproject_django/myproject_django/wsgi.py	/^import os$/;"	kind:namespace	line:10
+os	venv/bin/activate_this.py	/^import os$/;"	kind:namespace	line:14
+os	venv/lib/python3.6/distutils/__init__.py	/^import os$/;"	kind:namespace	line:2
+os	venv/lib/python3.6/site.py	/^import os$/;"	kind:namespace	line:66
+os.py	venv/lib/python3.6/os.py	1;"	kind:file	line:1
+path	myproject_django/myproject_django/urls.py	/^from django.urls import include,path$/;"	kind:namespace	line:17
+path	myproject_django/polls/urls.py	/^from django.urls import path$/;"	kind:namespace	line:1
+pd	myproject_django/polls/views.py	/^import pandas as pd$/;"	kind:namespace	line:1
+posixpath.py	venv/lib/python3.6/posixpath.py	1;"	kind:file	line:1
+prev_sys_path	venv/bin/activate_this.py	/^prev_sys_path = list(sys.path)$/;"	kind:variable	line:25
+pydoc	venv/lib/python3.6/site.py	/^        import pydoc$/;"	kind:namespace	line:502
+python-config	venv/bin/python-config	1;"	kind:file	line:1
+pyver	venv/bin/python-config	/^pyver = sysconfig.get_config_var('VERSION')$/;"	kind:variable	line:30
+question	myproject_django/polls/models.py	/^    question=models.ForeignKey(Question,on_delete=models.CASCADE)$/;"	kind:variable	line:47
+random.py	venv/lib/python3.6/random.py	1;"	kind:file	line:1
+re	myproject_django/polls/models.py	/^import re$/;"	kind:namespace	line:2
+re.py	venv/lib/python3.6/re.py	1;"	kind:file	line:1
+readline	venv/lib/python3.6/site.py	/^            import readline$/;"	kind:namespace	line:689
+real_distutils	venv/lib/python3.6/distutils/__init__.py	/^    real_distutils = imp.load_module("_virtualenv_distutils", None, distutils_path, ("", "", imp.PKG_DIRECTORY))$/;"	kind:variable	line:18
+register_readline	venv/lib/python3.6/site.py	/^    def register_readline():$/;"	kind:function	line:685
+removeduppaths	venv/lib/python3.6/site.py	/^def removeduppaths():$/;"	kind:function	line:115
+render	myproject_django/polls/views.py	/^from django.shortcuts import render$/;"	kind:namespace	line:3
+reprlib.py	venv/lib/python3.6/reprlib.py	1;"	kind:file	line:1
+rlcompleter	venv/lib/python3.6/site.py	/^            import rlcompleter$/;"	kind:namespace	line:690
+rlcompleter.py	venv/lib/python3.6/rlcompleter.py	1;"	kind:file	line:1
+section	myproject_django/polls/models.py	/^    section=models.IntegerField()$/;"	kind:variable	line:15
+set	venv/lib/python3.6/site.py	/^    from sets import Set as set$/;"	kind:namespace	line:76
+setBEGINLIBPATH	venv/lib/python3.6/site.py	/^def setBEGINLIBPATH():$/;"	kind:function	line:355
+setcopyright	venv/lib/python3.6/site.py	/^def setcopyright():$/;"	kind:function	line:469
+setencoding	venv/lib/python3.6/site.py	/^def setencoding():$/;"	kind:function	line:529
+sethelper	venv/lib/python3.6/site.py	/^def sethelper():$/;"	kind:function	line:507
+setquit	venv/lib/python3.6/site.py	/^def setquit():$/;"	kind:function	line:372
+settings.py	myproject_django/myproject_django/settings.py	1;"	kind:file	line:1
+shutil.py	venv/lib/python3.6/shutil.py	1;"	kind:file	line:1
+site	venv/bin/activate_this.py	/^import site$/;"	kind:namespace	line:15
+site.py	venv/lib/python3.6/site.py	1;"	kind:file	line:1
+site_packages	venv/bin/activate_this.py	/^    site_packages = os.path.join(base, "Lib", "site-packages")$/;"	kind:variable	line:22
+site_packages	venv/bin/activate_this.py	/^    site_packages = os.path.join(base, "lib", "python%s" % sys.version[:3], "site-packages")$/;"	kind:variable	line:24
+sitecustomize	venv/lib/python3.6/site.py	/^        import sitecustomize$/;"	kind:namespace	line:553
+skip	venv/lib/python3.6/distutils/__init__.py	/^from distutils import dist, sysconfig  # isort:skip$/;"	kind:namespace	line:26
+sre_compile.py	venv/lib/python3.6/sre_compile.py	1;"	kind:file	line:1
+sre_constants.py	venv/lib/python3.6/sre_constants.py	1;"	kind:file	line:1
+sre_parse.py	venv/lib/python3.6/sre_parse.py	1;"	kind:file	line:1
+stat.py	venv/lib/python3.6/stat.py	1;"	kind:file	line:1
+struct.py	venv/lib/python3.6/struct.py	1;"	kind:file	line:1
+sys	myproject_django/manage.py	/^import sys$/;"	kind:namespace	line:3
+sys	venv/bin/activate_this.py	/^import sys$/;"	kind:namespace	line:16
+sys	venv/bin/python-config	/^import sys$/;"	kind:namespace	line:3
+sys	venv/lib/python3.6/distutils/__init__.py	/^import sys$/;"	kind:namespace	line:3
+sys	venv/lib/python3.6/site.py	/^import sys$/;"	kind:namespace	line:67
+sysconfig	venv/bin/python-config	/^import sysconfig$/;"	kind:namespace	line:5
+sysconfig	venv/lib/python3.6/distutils/__init__.py	/^from distutils import dist, sysconfig  # isort:skip$/;"	kind:namespace	line:26
+sysconfig_get_config_vars	venv/lib/python3.6/distutils/__init__.py	/^def sysconfig_get_config_vars(*args):$/;"	kind:function	line:104
+sysconfig_get_python_inc	venv/lib/python3.6/distutils/__init__.py	/^def sysconfig_get_python_inc(plat_specific=0, prefix=None):$/;"	kind:function	line:80
+sysconfig_get_python_lib	venv/lib/python3.6/distutils/__init__.py	/^def sysconfig_get_python_lib(plat_specific=0, standard_lib=0, prefix=None):$/;"	kind:function	line:92
+tarfile.py	venv/lib/python3.6/tarfile.py	1;"	kind:file	line:1
+tempfile.py	venv/lib/python3.6/tempfile.py	1;"	kind:file	line:1
+tests.py	myproject_django/polls/tests.py	1;"	kind:file	line:1
+text	myproject_django/polls/models.py	/^    text=models.TextField()$/;"	kind:variable	line:41
+textwrap	venv/lib/python3.6/site.py	/^        import textwrap$/;"	kind:namespace	line:826
+token.py	venv/lib/python3.6/token.py	1;"	kind:file	line:1
+tokenize.py	venv/lib/python3.6/tokenize.py	1;"	kind:file	line:1
+type1	myproject_django/polls/models.py	/^    type1=models.CharField(max_length=20)$/;"	kind:variable	line:16
+type2	myproject_django/polls/models.py	/^    type2=models.CharField(max_length=20)$/;"	kind:variable	line:17
+types.py	venv/lib/python3.6/types.py	1;"	kind:file	line:1
+upload	myproject_django/polls/views.py	/^def upload(request):$/;"	kind:function	line:4
+urlpatterns	myproject_django/myproject_django/urls.py	/^urlpatterns = [$/;"	kind:variable	line:20
+urlpatterns	myproject_django/polls/urls.py	/^urlpatterns = [$/;"	kind:variable	line:5
+urls.py	myproject_django/myproject_django/urls.py	1;"	kind:file	line:1
+urls.py	myproject_django/polls/urls.py	1;"	kind:file	line:1
+usercustomize	venv/lib/python3.6/site.py	/^        import usercustomize$/;"	kind:namespace	line:671
+valid_opts	venv/bin/python-config	/^valid_opts = ['prefix', 'exec-prefix', 'includes', 'libs', 'cflags',$/;"	kind:variable	line:7
+views	myproject_django/polls/urls.py	/^from . import views$/;"	kind:namespace	line:2
+views.py	myproject_django/polls/views.py	1;"	kind:file	line:1
+virtual_addsitepackages	venv/lib/python3.6/site.py	/^def virtual_addsitepackages(known_paths):$/;"	kind:function	line:648
+virtual_install_main_packages	venv/lib/python3.6/site.py	/^def virtual_install_main_packages():$/;"	kind:function	line:558
+warnings	venv/lib/python3.6/distutils/__init__.py	/^import warnings$/;"	kind:namespace	line:4
+warnings.py	venv/lib/python3.6/warnings.py	1;"	kind:file	line:1
+weakref.py	venv/lib/python3.6/weakref.py	1;"	kind:file	line:1
+write_history	venv/lib/python3.6/site.py	/^            def write_history():$/;"	kind:function	line:723
+wsgi.py	myproject_django/myproject_django/wsgi.py	1;"	kind:file	line:1
