@@ -2,6 +2,7 @@ import pandas as pd
 from .models import *
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse, JsonResponse
 
 @csrf_exempt
 def upload(request):
@@ -33,9 +34,13 @@ def upload(request):
             person.save()
     return True
 
-'''def person(request,person_id):
+def person(request,person_id):
     if person_id == -1:
         persons=[]
         for person in Person.objects.all():
             persons.append(person.answers.objects.all())
-        return persons'''
+        return JsonResponse({
+            'persons':persons
+        },json_dump_params=('ensure_ascii':True))
+    return JsonResponse({})
+    
