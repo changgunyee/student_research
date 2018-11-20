@@ -78,7 +78,7 @@ export default{
     }
   },
   components:{
-    Answer
+    Person
   }
 }
 </script>
