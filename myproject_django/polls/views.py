@@ -41,6 +41,5 @@ def person(request,person_id):
             persons.append(person.answers.objects.all())
         return JsonResponse({
             'persons':persons
-        },json_dump_params=('ensure_ascii':True))
+        })
     return JsonResponse({})
-    
