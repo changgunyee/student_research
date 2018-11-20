@@ -37,7 +37,7 @@
   </section>-->
 <script>
 import axios from 'axios'
-import Person from 'components/answer.vue'
+import Person from './components/Person.vue'
 export default{
   data(){
     return {
