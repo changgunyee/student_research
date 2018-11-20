@@ -1,6 +1,5 @@
 <template>
   <div>
-    <input type="hidden" name="_token" :value="csrf">
 
     <input type="file" id="question_excel_file" ref="question_input" v-on:change="fileUpload()" required='true'/>
 
@@ -56,7 +55,9 @@ export default{
             }
         }
       return axios.post('https://127.0.0.1:8000/polls/upload',data,config).then((e)=>{
-          console.log(e)
+        console.log(e)
+      }).catch((e)=>{
+        console.log(e)
       })
     }
   }
