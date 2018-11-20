@@ -41,9 +41,9 @@ def person(request,person_id):
             person_list=person.to_list()
             person_list[2]=[str(value) for value in person_list[2]]
             persons[person.id]={
-                "name":person[0],
-                "email":person[1],
-                "answers":person[2]
+                "name":person_list[0],
+                "email":person_list[1],
+                "answers":person_list[2]
                 }
         return JsonResponse(persons)
     return JsonResponse({})
