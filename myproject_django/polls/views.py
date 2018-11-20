@@ -35,7 +35,7 @@ def upload(request):
     return True
 
 def person(request,person_id):
-    if person_id == -1:
+    if person_id == 0:
         persons=[]
         for person in Person.objects.all():
             persons.append(person.answers.objects.all())
