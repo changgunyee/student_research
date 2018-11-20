@@ -6,6 +6,12 @@
     <input type="file" id="answer_excel_file" ref="answer_input" v-on:change="fileUpload()" required='true'/>
 
     <button v-on:click="submitFiles()">Submit</button>
+
+    <button v-on:click="callAnswers()">불러오기</button>
+
+    <div v-for="person in persons" :key="person.key">
+      <person :name="person.name" :email="person.email" :answers="person.answers"></person>
+    </div>
   </div>  
 </template>
   <!--<section class="container">
@@ -31,10 +37,13 @@
   </section>-->
 <script>
 import axios from 'axios'
+import Person from 'components/answer.vue'
 export default{
   data(){
-    let files={}
-    return files
+    return {
+      files: {},
+      persons:{}
+    }
   },
   methods:{
     fileUpload(){
@@ -59,7 +68,17 @@ export default{
       }).catch((e)=>{
         console.log(e)
       })
+    },
+    callAnswers(){
+      return axios.get('http://54.180.115.81:8000/polls/person/0').then((response)=>{
+        this.persons=response.data
+      }).catch((e)=>{
+        console.log(e)
+      })
     }
+  },
+  components:{
+    Answer
   }
 }
 </script>
