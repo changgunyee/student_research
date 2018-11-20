@@ -59,4 +59,6 @@ class Person(models.Model):
         return self.name
     def to_list(self):
         return [self.name,self.email,list(self.answers.all().order_by('question__number'))]
+    class Meta():
+        indexes=['name','email','answers']
 
