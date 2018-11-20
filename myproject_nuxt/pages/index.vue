@@ -70,7 +70,7 @@ export default{
       })
     },
     callAnswers(){
-      return axios.get('http://localhost:8000/polls/person/0').then((response)=>{
+      return axios.get('https://54.180.115.81:8000/polls/person/0').then((response)=>{
         this.persons=response.data
       }).catch((e)=>{
         console.log(e)
