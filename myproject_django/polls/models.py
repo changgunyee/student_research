@@ -57,4 +57,6 @@ class Person(models.Model):
     answers=models.ManyToManyField(Answer)
     def __str__(self):
         return self.name
+    def to_list(self):
+        return [self.name,self.email,list(self.answers.all())]
 
