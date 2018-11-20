@@ -36,10 +36,10 @@ def upload(request):
 
 def person(request,person_id):
     if person_id == 0:
-        persons=[]
+        persons={}
         for person in Person.objects.all():
-            persons.append(person.answers.objects.all())
-        return JsonResponse({
-            'persons':persons
-        })
+            person_list=person.to_list()
+            person_list[2]=[str(value) for value in person_list[2]]
+            persons[p.id]=person_list
+        return JsonResponse(persons)
     return JsonResponse({})
