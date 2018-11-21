@@ -33,7 +33,6 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'pipeline',
     'corsheaders',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
