@@ -70,7 +70,10 @@ export default{
       })
     },
     callAnswers(){
-      return axios.get('http://54.180.115.81:8000/polls/person/0').then((response)=>{
+      const config ={
+        'content-type':'application/json'
+      }
+      return axios.get('http://54.180.115.81:8000/polls/person/0',config).then((response)=>{
         this.persons=response.data
       }).catch((e)=>{
         console.log(e)
