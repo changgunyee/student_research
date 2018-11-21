@@ -46,5 +46,6 @@ def person(request,person_id):
                 "answers":person_list[2]
                 }
         response=JsonResponse(persons)
+        response['Access-Control-Request-Headers']=None
         return response
     return JsonResponse({})
