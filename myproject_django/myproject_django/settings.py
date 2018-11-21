@@ -76,7 +76,7 @@ TEMPLATES = [
 CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = [
-    '0.0.0.0:80',
+    'http://54.180.115.81:80',
 ]
 
 WSGI_APPLICATION = 'myproject_django.wsgi.application'
