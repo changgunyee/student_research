@@ -47,5 +47,5 @@ def person(request,person_id):
                 }
         response=JsonResponse(persons)
         response["Access-Control-Allow-Origin"] = "*"
-        return JsonResponse(persons)
+        return response
     return JsonResponse({})
