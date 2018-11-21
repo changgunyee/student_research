@@ -9,9 +9,11 @@
 
     <button v-on:click="callAnswers()">불러오기</button>
 
-    <div v-for="person in persons" :key="person.key">
-      <person :name="person.name" :email="person.email" :answers="person.answers"></person>
-    </div>
+    <table>
+      <div v-for="person in persons" :key="person.key">
+        <person :name="person.name" :email="person.email" :answers="person.answers"></person>
+      </div> 
+    </table>
   </div>  
 </template>
   <!--<section class="container">
@@ -88,3 +90,9 @@ export default{
   }
 }
 </script>
+<style>
+table{
+    white-space: nowrap;
+    table-layout: fixed;
+}
+</style>

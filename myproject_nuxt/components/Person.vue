@@ -1,11 +1,9 @@
 <template>
-    <table class="table">
-        <tr>
-            <th>{{name}}</th>
-            <td>{{email}}</td>
-            <td v-for="answer in answers" v-bind:key="answer.id">{{answer}}</td>
-        </tr>
-    </table>
+    <tr>
+        <th>{{name}}</th>
+        <td>{{email}}</td>
+        <td v-for="answer in answers" v-bind:key="answer.id">{{answer}}</td>
+    </tr>
 </template>
 <script>
 export default{
@@ -13,9 +11,3 @@ export default{
 }
 </script>
 
-<style>
-table{
-    white-space: nowrap;
-    table-layout: fixed;
-}
-</style>
