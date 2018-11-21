@@ -10,9 +10,10 @@
     <button v-on:click="callAnswers()">불러오기</button>
 
     <table>
-      <div v-for="person in persons" :key="person.key">
+     <!-- <div v-for="person in persons" :key="person.key">
         <person :name="person.name" :email="person.email" :answers="person.answers"></person>
-      </div> 
+      </div> -->
+      <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
     </table>
   </div>  
 </template>
