@@ -33,7 +33,8 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-   # 'corsheaders',
+    'pipeline',
+    'corsheaders',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +45,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.BrokenLinkEmailsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -70,7 +74,11 @@ TEMPLATES = [
         },
     },
 ]
+CORS_ORIGIN_ALLOW_ALL = False
 
+CORS_ORIGIN_WHITELIST = [
+    'localhost:80',
+]
 WSGI_APPLICATION = 'myproject_django.wsgi.application'
 
 
