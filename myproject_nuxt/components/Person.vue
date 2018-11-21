@@ -1,5 +1,5 @@
 <template>
-    <table>
+    <table class="table">
         <tr>
             <th>{{name}}</th>
             <th>{{email}}</th>
@@ -12,3 +12,9 @@ export default{
     props:['name','email',"answers"]
 }
 </script>
+
+<style>
+.table th{
+    font-size: 0.5em
+}
+</style>
