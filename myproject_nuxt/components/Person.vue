@@ -2,8 +2,8 @@
     <table class="table">
         <tr>
             <th>{{name}}</th>
-            <th>{{email}}</th>
-            <th v-for="answer in answers" v-bind:key="answer.id">{{answer}}</th>
+            <td>{{email}}</td>
+            <td v-for="answer in answers" v-bind:key="answer.id">{{answer}}</td>
         </tr>
     </table>
 </template>
@@ -14,7 +14,7 @@ export default{
 </script>
 
 <style>
-.table th{
-    font-size: 0.5em
+table{
+    table-layout: fixed
 }
 </style>
