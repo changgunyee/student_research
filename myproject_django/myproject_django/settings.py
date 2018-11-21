@@ -45,7 +45,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.BrokenLinkEmailsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -75,11 +74,11 @@ TEMPLATES = [
 ]
 CORS_ORIGIN_ALLOW_ALL = True
 
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_CREDENTIALS = False
 
-CORS_ORIGIN_WHITELIST = [
-    
-]
+#CORS_ORIGIN_WHITELIST = [
+#    
+#]
 
 WSGI_APPLICATION = 'myproject_django.wsgi.application'
 
