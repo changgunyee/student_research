@@ -70,11 +70,13 @@ export default{
       })
     },
     callAnswers(){
-      // const config ={
-      //   'content-type':'application/json',
-      //   'X-Frame-Options': ''
-      // }
-      return axios.get('http://54.180.115.81:8000/polls/person/0').then((response)=>{
+       const config ={
+         'content-type':'application/json',
+         headers:{
+           'Access-Control-Allow-Origin': '*',
+           }
+       }
+      return axios.get('http://54.180.115.81:8000/polls/person/0',config).then((response)=>{
         this.persons=response.data
       }).catch((e)=>{
         console.log(e)
