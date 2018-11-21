@@ -45,7 +45,7 @@ def person(request,person_id):
                 "email":person_list[1],
                 "answers":person_list[2]
                 }
-        response=JsonResponse(persons)
+        response=HttpResponse(json.dumps(persons))
         response['Access-Control-Request-Headers']=None
         return response
     return JsonResponse({})
