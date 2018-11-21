@@ -1,6 +1,5 @@
 import pandas as pd
 from .models import *
-import json
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse, JsonResponse
@@ -46,7 +45,5 @@ def person(request,person_id):
                 "email":person_list[1],
                 "answers":person_list[2]
                 }
-        response=HttpResponse(json.dumps(persons))
-        response['Access-Control-Request-Headers']=''
-        return response
+        return JsonResponse(persons)
     return JsonResponse({})
