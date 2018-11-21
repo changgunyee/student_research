@@ -15,6 +15,7 @@ export default{
 
 <style>
 table{
-    table-layout: fixed
+    white-space: nowrap;
+    table-layout: fixed;
 }
 </style>
