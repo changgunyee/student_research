@@ -50,6 +50,6 @@ def person(request,person_id):
         columns=['name','email']
         for question in Question.objects.all().order_by('number'):
             columns.append(str(question.number))
-        persons['columns']=columns
-        return JsonResponse(persons)
+        response['columns']=columns
+        return JsonResponse(response)
     return JsonResponse({})
