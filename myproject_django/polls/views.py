@@ -45,5 +45,9 @@ def person(request,person_id):
                 "email":person_list[1],
                 "answers":person_list[2]
                 }
+        columns=['name','email']
+        for question in Question.objects.all().order_by('question__number'):
+            columns.append(question.number)
+        persons['columns']=columns
         return JsonResponse(persons)
     return JsonResponse({})
