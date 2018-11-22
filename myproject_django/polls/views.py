@@ -35,6 +35,7 @@ def upload(request):
     return True
 
 def person(request,person_id):
+    response={}
     if person_id == 0:
         persons={}
         for person in Person.objects.all():
@@ -45,6 +46,7 @@ def person(request,person_id):
                 "email":person_list[1],
                 "answers":person_list[2]
                 }
+        response['persons']=persons
         columns=['name','email']
         for question in Question.objects.all().order_by('number'):
             columns.append(str(question.number))
