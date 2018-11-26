@@ -15,19 +15,19 @@
         <tr>
           <th v-for="column in columns" :key="column.key">{{column}}</th>
         </tr>
-        <template v-if="select==1">
+        <div v-if="select==1">
           <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
-        </template>
-        <template v-else-if="select==2">
+        </div>
+        <div v-else-if="select==2">
           <tr v-for="question in response_rate" :key="question.key">
             <th>{{question}}</th>
             <td v-for="column in columns" :key="column.key">
               {{question[column]}}
             </td>
           </tr>
-        </template>
-        <template v-else>
-        </template>
+        </div>
+        <div v-else>
+        </div>
       </table>
     </div>  
 </template>
