@@ -19,8 +19,8 @@
           <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
         </div>
         <div v-else-if="select==2">
-          <tr v-for="question in response_rate" :key="question.key">
-            <th>{{question.key}}</th>
+          <tr v-for="(question,key) in response_rate" :key="question.key">
+            <th>{{key}}</th>
             <td v-for="column in columns" :key="column.key">
               {{question[column]}}
             </td>
