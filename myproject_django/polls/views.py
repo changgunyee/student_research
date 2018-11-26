@@ -56,14 +56,16 @@ def person(request,person_id):
 
 def response_rate(request):
     response={}
+    response_rate={}
     for question in Question.objects.all():
-        response[question.number]={}
+        response_rate[question.number]={}
         for answer in question.answer_set.all():
-            response[question.number][str(answer)]=0
+            response_rate[question.number][str(answer)]=0
     for person in Person.objects.all():
         for answer in person.answers.all():
-            response[answer.question.number][str(answer)]=response[answer.question.number][str(answer)]+1
+            response_rate[answer.question.number][str(answer)]=response_rate[answer.question.number][str(answer)]+1
     response['columns']=[str(answer) for answer in Question.objects.all().first().answer_set.all()]
+    response['response_rate']=response_rate
     return JsonResponse(response)
         
         
