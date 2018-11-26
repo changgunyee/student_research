@@ -94,7 +94,7 @@ export default{
       })
     },
     callAnswers(){
-      this.select=1;
+      this.select=1
        const config ={
          'content-type':'application/json',
          headers:{
@@ -109,7 +109,8 @@ export default{
       })
     },
     callAnswers2(){
-      this.select=2;
+      this.columns=[]
+      this.select=2
       const config ={
          'content-type':'application/json',
          headers:{
