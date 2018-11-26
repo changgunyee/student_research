@@ -61,7 +61,7 @@ def response_rate(request):
             response_rate[question.number][str(answer)]=0
     for person in Person.objects.all():
         for answer in person.answers.all():
-            response_rate[answer.question.number][str(answer)]=response[answer.question.number][str(answer)]+1
+            response_rate[answer.question.number][str(answer)]=response_rate[answer.question.number][str(answer)]+1
     
     response={'response_rate':response_rate}
     return JsonResponse(response)
