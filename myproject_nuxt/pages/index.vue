@@ -7,17 +7,27 @@
 
     <button v-on:click="submitFiles()">Submit</button>
 
-    <button v-on:click="callAnswers()">불러오기</button>
+    <button v-on:click="callAnswers()">응답결과</button>
 
-    <table>
-     <!-- <div v-for="person in persons" :key="person.key">
-        <person :name="person.name" :email="person.email" :answers="person.answers"></person>
-      </div> -->
-      <tr>
-        <th v-for="column in columns" :key="column.key">{{column}}</th>
-      </tr>
-      <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
-    </table>
+    <button v-on:click="callAnswers2()">문항별 응답비율</button>
+    <div v-if="select==1">
+      <table>
+        <tr>
+          <th v-for="column in columns" :key="column.key">{{column}}</th>
+        </tr>
+        <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
+      </table>
+    </div>
+    <div v-else-if="select==2">
+      <table>
+        <tr>
+          <th v-for="column in columns" :key="column.key">{{column}}</th>
+        </tr>
+        <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
+      </table>
+    </div>
+    <div v-else>
+    </div>
   </div>  
 </template>
   <!--<section class="container">
@@ -47,9 +57,11 @@ import Person from '~/components/Person.vue'
 export default{
   data(){
     return {
+      select:0,
       files: {},
       columns:[],
-      persons:{}
+      persons:{},
+      response_rate:{},
     }
   },
   methods:{
@@ -77,6 +89,7 @@ export default{
       })
     },
     callAnswers(){
+      this.select=1;
        const config ={
          'content-type':'application/json',
          headers:{
@@ -86,6 +99,20 @@ export default{
       return axios.get('http://54.180.115.81:8000/polls/person/0',config).then((response)=>{
         this.persons=response.data['persons']
         this.columns=response.data['columns']
+      }).catch((e)=>{
+        console.log(e);
+      })
+    },
+    callAnswers2(){
+      this.select=2;
+      const config ={
+         'content-type':'application/json',
+         headers:{
+           'Access-Control-Request-Headers': '',
+           },
+       }
+       return axios.get('http://54.180.115.81:8000/polls/response_rate',config).then((response)=>{
+        this.response_rate=response.data['response_rate']
       }).catch((e)=>{
         console.log(e)
       })
