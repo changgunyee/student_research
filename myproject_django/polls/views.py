@@ -57,6 +57,7 @@ def person(request,person_id):
 def response_rate(request):
     response_rate={}
     for question in Question.objects.all():
+        response_rate[question.number]={}
         for answer in question.answer_set.all():
             response_rate[question.number][str(answer)]=0
     for person in Person.objects.all():
