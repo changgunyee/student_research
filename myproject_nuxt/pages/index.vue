@@ -25,8 +25,8 @@
               {{question[column]}}
             </td>
           </tr>
-        <div v-else>
         </div>
+        <div v-else>
       </table>
     </div>  
 </template>
