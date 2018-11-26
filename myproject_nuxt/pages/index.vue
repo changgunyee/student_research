@@ -27,6 +27,7 @@
           </tr>
         </div>
         <div v-else>
+        </div>
       </table>
     </div>  
 </template>
