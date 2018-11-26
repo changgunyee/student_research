@@ -20,7 +20,7 @@
         </div>
         <div v-else-if="select==2">
           <tr v-for="question in response_rate" :key="question.key">
-            <th>{{question}}</th>
+            <th>{{question.key}}</th>
             <td v-for="column in columns" :key="column.key">
               {{question[column]}}
             </td>
