@@ -12,13 +12,17 @@
     <button v-on:click="callAnswers2()">문항별 응답비율</button>
     
       <table>
-        <tr>
-          <th v-for="column in columns" :key="column.key">{{column}}</th>
-        </tr>
+        
         <div v-if="select==1">
-          <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
+         <tr>
+            <th v-for="column in columns" :key="column.key">{{column}}</th>
+         </tr>
+        <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
         </div>
         <div v-else-if="select==2">
+          <tr>
+            <th v-for="column in columns" :key="column.key">{{column}}</th>
+          </tr>
           <tr v-for="(question,key) in response_rate" :key="question.key">
             <th>{{key}}</th>
             <td v-for="column in columns" :key="column.key">
