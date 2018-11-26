@@ -19,7 +19,7 @@
         <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
         </table>
         </template>
-        <div v-else-if="select==2">
+        <template v-else-if="select==2">
           <table>
           <tr>
             <th></th>
@@ -32,9 +32,7 @@
             </td>
           </tr>
         </table>
-        </div>
-        <div v-else>
-        </div>
+        </template>
     </div>  
 </template>
   <!--<section class="container">
