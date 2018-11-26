@@ -20,6 +20,7 @@
         <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
         </div>
         <div v-else-if="select==2">
+          <tr></tr>
           <tr>
             <th v-for="column in columns" :key="column.key">{{column}}</th>
           </tr>
