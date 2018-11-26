@@ -10,16 +10,17 @@
     <button v-on:click="callAnswers()">응답결과</button>
 
     <button v-on:click="callAnswers2()">문항별 응답비율</button>
-    
-      <table>
         
-        <div v-if="select==1">
+        <template v-if="select==1">
+          <table>
          <tr>
             <th v-for="column in columns" :key="column.key">{{column}}</th>
          </tr>
         <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
-        </div>
+        </table>
+        </template>
         <div v-else-if="select==2">
+          <table>
           <tr>
             <th></th>
             <th v-for="column in columns" :key="column.key">{{column}}</th>
@@ -30,10 +31,10 @@
               {{question[column]}}
             </td>
           </tr>
+        </table>
         </div>
         <div v-else>
         </div>
-      </table>
     </div>  
 </template>
   <!--<section class="container">
