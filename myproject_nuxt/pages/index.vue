@@ -94,6 +94,7 @@ export default{
       })
     },
     callAnswers(){
+      this.columns=[]
       this.select=1
        const config ={
          'content-type':'application/json',
