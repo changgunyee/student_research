@@ -28,7 +28,7 @@ export default{
   },
   created(){
       this.getPersonData()
-      this.count=len(this.persons)
+      this.count=this.persons.length
   },
   methods:{
       getPersonData(){
