@@ -10,27 +10,15 @@
     <button v-on:click="select=1">응답결과</button>
 
     <button v-on:click="select=2">문항별 응답비율</button>
+
+    <template v-if="select==1">
+      <AnswerTable ></AnswerTable>
+    </template>
+
+    <template v-if="select==2">
+      <AnswerRateTable ></AnswerRateTable>
+    </template>
       
-          <AnswerTable v-if="select==1"></AnswerTable>
-     <!--<table>
-         <tr>
-            <th v-for="column in columns" :key="column.key">{{column}}</th>
-         </tr>
-        <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
-        </table>
-        <template v-else-if="select==2">
-          <table>
-          <tr>
-            <th></th>
-            <th v-for="column in columns" :key="column.key">{{column}}</th>
-          </tr>
-          <tr v-for="(question,key) in response_rate" :key="question.key">
-            <th>{{key}}</th>
-            <td v-for="column in columns" :key="column.key">
-              {{question[column]}}
-            </td>
-          </tr>
-        </table>-->  
   </div>
 </template>
 <script>
@@ -69,26 +57,10 @@ export default{
         console.log(e)
       })
     },
-
-    callAnswers2(){
-      this.columns=[]
-      this.select=2
-      const config ={
-         'content-type':'application/json',
-         headers:{
-           'Access-Control-Request-Headers': '',
-           },
-       }
-       return axios.get('http://54.180.115.81:8000/polls/response_rate',config).then((response)=>{
-        this.response_rate=response.data['response_rate']
-        this.columns=response.data['columns']
-      }).catch((e)=>{
-        console.log(e)
-      })
-    }
   },
   components:{
     AnswerTable,
+    AnswerRateTable,
   }
 }
 </script>
