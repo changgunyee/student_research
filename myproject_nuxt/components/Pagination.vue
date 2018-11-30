@@ -15,7 +15,7 @@ export default{
     },
     computed:{
         numOfPage(){
-            return this.count/10+1
+            return parseInt(this.count/10)+1
         },
     },
     watch:{
