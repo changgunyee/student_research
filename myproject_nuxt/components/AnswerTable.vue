@@ -40,7 +40,7 @@ export default{
         return axios.get('http://54.180.115.81:8000/polls/person/0',config).then((response)=>{
             this.persons=response.data['persons']
             this.columns=response.data['columns']
-            this.count=this.persons.length
+            this.count=Object.keys(this.persons).length
         }).catch((e)=>{
             console.log(e);
         })
