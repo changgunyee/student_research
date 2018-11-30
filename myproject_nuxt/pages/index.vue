@@ -16,7 +16,7 @@
     </template>
 
     <template v-if="select==2">
-      <AnswerRateTable ></AnswerRateTable>
+      <AnswerRateTable></AnswerRateTable>
     </template>
       
   </div>
@@ -24,6 +24,7 @@
 <script>
 import axios from 'axios'
 import AnswerTable from '~/components/AnswerTable.vue'
+import AnswerRateTable from '~/components/AnswerRateTable.vue'
 export default{
   data(){
     return {
