@@ -1,7 +1,7 @@
 <template>
     <table>
         <tr>
-            <th></th>
+            <th>question</th>
             <th v-for="column in columns" :key="column.key">{{column}}</th>
         </tr>
         <tr v-for="(question,key) in answer_rate" :key="question.key">
@@ -19,6 +19,9 @@ export default{
       columns:[],
       answer_rate:{},
     }
+  },
+  created(){
+      this.getAnswerRateData()
   },
   methods:{
     getAnswerRateData(){
