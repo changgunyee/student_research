@@ -19,7 +19,7 @@ export default{
         },
     },
     watch:{
-        count_data:function(newVal){
+        count_data(newVal){
             this.count=newVal
         }
     }
