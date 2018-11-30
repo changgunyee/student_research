@@ -12,7 +12,7 @@
                 </td>
             </tr>
         </table>
-        <Pagination :count_data="count"></Pagination>
+        <Pagination :count_data="getCount()"></Pagination>
     </div>
 </template>
 <script>
@@ -23,26 +23,13 @@ export default{
     return {
       columns:[],
       answer_rate:{},
-      count:0,
     }
   },
   created(){
-      const config ={
-         'content-type':'application/json',
-         headers:{
-           'Access-Control-Request-Headers': '',
-           },
-       }
-       axios.get('http://54.180.115.81:8000/polls/answer_rate',config).then((response)=>{
-         this.answer_rate=response.data['answer_rate']
-         this.columns=response.data['columns']
-          this.count=Object.keys(this.answer_rate).length
-      }).catch((e)=>{
-        console.log(e)
-      })
+      this.getAnswerRateData()
   },
   methods:{
-   /* getAnswerRateData(){
+    getAnswerRateData(){
       const config ={
          'content-type':'application/json',
          headers:{
@@ -52,11 +39,13 @@ export default{
        return axios.get('http://54.180.115.81:8000/polls/answer_rate',config).then((response)=>{
         this.answer_rate=response.data['answer_rate']
         this.columns=response.data['columns']
-        this.count=Object.keys(this.answer_rate).length
       }).catch((e)=>{
         console.log(e)
       })
-    }*/
+    },
+    getCount(){
+        return Object.keys(this.answer_rate).length
+    }
   },
   components:{
       Pagination
