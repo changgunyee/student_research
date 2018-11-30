@@ -1,6 +1,6 @@
 <template>
     <tr>
-        <td v-for="page in numOfPage()" :key="page.key">
+        <td v-for="page in numOfPage" :key="page.key">
             {{page}}
         </td>
     </tr>
@@ -17,6 +17,11 @@ export default{
         numOfPage(){
             return this.count/10+1
         },
+    },
+    watch:{
+        count_data:function(newVal){
+            this.count=newVal
+        }
     }
 }
 </script>
