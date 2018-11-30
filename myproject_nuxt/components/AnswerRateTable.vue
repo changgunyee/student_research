@@ -28,7 +28,7 @@ export default{
   },
   created(){
       this.getAnswerRateData()
-
+      this.count=len(answer_rate)
   },
   methods:{
     getAnswerRateData(){
@@ -41,7 +41,6 @@ export default{
        return axios.get('http://54.180.115.81:8000/polls/answer_rate',config).then((response)=>{
         this.answer_rate=response.data['answer_rate']
         this.columns=response.data['columns']
-        this.count=len(response.data['answer_rate'])
       }).catch((e)=>{
         console.log(e)
       })

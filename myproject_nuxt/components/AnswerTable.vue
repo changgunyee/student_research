@@ -28,6 +28,7 @@ export default{
   },
   created(){
       this.getPersonData()
+      this.count=len(persons)
   },
   methods:{
       getPersonData(){
@@ -40,7 +41,6 @@ export default{
         return axios.get('http://54.180.115.81:8000/polls/person/0',config).then((response)=>{
             this.persons=response.data['persons']
             this.columns=response.data['columns']
-            this.count=len(response.data['persons'])
         }).catch((e)=>{
             console.log(e);
         })
