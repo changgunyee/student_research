@@ -7,10 +7,10 @@
 </template>
 <script>
 export default{
-    props:['count'],
+    props:['count_data'],
     data(){
         return {
-            count:this.count
+            count:this.count_data
         }
     },
     computed:{

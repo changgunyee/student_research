@@ -12,7 +12,7 @@
                 <td v-for="answer in person.answers" :key="answer.key"> {{answer}}</td>
             </tr>
         </table>
-        <Pagination :count="count"></Pagination>
+        <Pagination :count_data="count"></Pagination>
     </div>
 </template>
 <script>

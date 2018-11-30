@@ -12,7 +12,7 @@
                 </td>
             </tr>
         </table>
-        <Pagination :count="count"></Pagination>
+        <Pagination :coun_data="count"></Pagination>
     </div>
 </template>
 <script>
