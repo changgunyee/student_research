@@ -28,7 +28,7 @@ export default{
            'Access-Control-Request-Headers': '',
            },
        }
-       return axios.get('http://54.180.115.81:8000/polls/response_rate',config).then((response)=>{
+       return axios.get('http://54.180.115.81:8000/polls/answer_rate',config).then((response)=>{
         this.answer_rate=response.data['answer_rate']
         this.columns=response.data['columns']
       }).catch((e)=>{
