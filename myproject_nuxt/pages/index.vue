@@ -7,18 +7,17 @@
 
     <button v-on:click="submitFiles()">Submit</button>
 
-    <button v-on:click="callAnswers()">응답결과</button>
+    <button v-on:click="select=1">응답결과</button>
 
-    <button v-on:click="callAnswers2()">문항별 응답비율</button>
-        
-        <template v-if="select==1">
-          <table>
+    <button v-on:click="select=2">문항별 응답비율</button>
+      
+          <AnswerTable v-if="select==1"></AnswerTable>
+     <!--<table>
          <tr>
             <th v-for="column in columns" :key="column.key">{{column}}</th>
          </tr>
         <person v-for="person in persons" :key="person.key" :name="person.name" :email="person.email" :answers="person.answers"></person>
         </table>
-        </template>
         <template v-else-if="select==2">
           <table>
           <tr>
@@ -31,41 +30,17 @@
               {{question[column]}}
             </td>
           </tr>
-        </table>
-        </template>
-    </div>  
+        </table>-->  
 </template>
-  <!--<section class="container">
-    <div>
-      <app-logo/>
-      <h1 class="title">
-        myproject_nuxt
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links" >
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
-    </div>
-  </section>-->
 <script>
 import axios from 'axios'
-import Person from '~/components/Person.vue'
+import AnswerTable from '~/components/AnswerTable.vue'
 export default{
   data(){
     return {
       select:0,
       files: {},
       columns:[],
-      persons:{},
       response_rate:{},
     }
   },
@@ -93,22 +68,7 @@ export default{
         console.log(e)
       })
     },
-    callAnswers(){
-      this.columns=[]
-      this.select=1
-       const config ={
-         'content-type':'application/json',
-         headers:{
-           'Access-Control-Request-Headers': '',
-           },
-       }
-      return axios.get('http://54.180.115.81:8000/polls/person/0',config).then((response)=>{
-        this.persons=response.data['persons']
-        this.columns=response.data['columns']
-      }).catch((e)=>{
-        console.log(e);
-      })
-    },
+
     callAnswers2(){
       this.columns=[]
       this.select=2
@@ -127,7 +87,7 @@ export default{
     }
   },
   components:{
-    Person
+    AnswerTable,
   }
 }
 </script>
