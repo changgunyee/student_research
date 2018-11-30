@@ -27,10 +27,22 @@ export default{
     }
   },
   created(){
-      this.getAnswerRateData()
+      const config ={
+         'content-type':'application/json',
+         headers:{
+           'Access-Control-Request-Headers': '',
+           },
+       }
+       axios.get('http://54.180.115.81:8000/polls/answer_rate',config).then((response)=>{
+         this.answer_rate=response.data['answer_rate']
+         this.columns=response.data['columns']
+          this.count=Object.keys(this.answer_rate).length
+      }).catch((e)=>{
+        console.log(e)
+      })
   },
   methods:{
-    getAnswerRateData(){
+   /* getAnswerRateData(){
       const config ={
          'content-type':'application/json',
          headers:{
@@ -44,7 +56,7 @@ export default{
       }).catch((e)=>{
         console.log(e)
       })
-    }
+    }*/
   },
   components:{
       Pagination
