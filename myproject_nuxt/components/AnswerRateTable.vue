@@ -46,5 +46,8 @@ export default{
       })
     }
   },
+  components:{
+      Pagination
+  }
 }
 </script>
