@@ -28,7 +28,7 @@ export default{
   },
   created(){
       this.getPersonData()
-      this.count=Object.keys(persons).length
+      this.count=Object.keys(this.persons).length
   },
   methods:{
       getPersonData(){

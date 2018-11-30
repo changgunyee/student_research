@@ -28,7 +28,7 @@ export default{
   },
   created(){
       this.getAnswerRateData()
-      this.count=Object.keys(answer_rate).length;
+      this.count=Object.keys(this.answer_rate).length;
   },
   methods:{
     getAnswerRateData(){
