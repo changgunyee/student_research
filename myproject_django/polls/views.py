@@ -69,6 +69,3 @@ def answer_rate(request):
     response['answer_rate']=answer_rate
     response['count']=count
     return JsonResponse(response)
-        
-def a(request,t,b):
-    return JsonResponse({'t':t,'b':b})
