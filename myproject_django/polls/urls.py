@@ -6,5 +6,5 @@ urlpatterns = [
     path('upload',views.upload),
     path('person/page/<int:current_page>',views.person_by_page),
     path('answer_rate',views.answer_rate),
-    path('a/<int:t><int:b>',views.a),
+    path('a/<int:t>-<int:b>',views.a),
 ]
