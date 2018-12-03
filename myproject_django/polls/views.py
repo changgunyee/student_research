@@ -34,11 +34,11 @@ def upload(request):
             person.save()
     return True
 
-def person(request,person_id):
+def person_by_page(request,current_page,num):
     response={}
     persons={}
     count=len(Person.objects.all())
-    for person in Person.objects.all()[(person_id-1)*10:(person_id)*10]:
+    for person in Person.objects.all()[(current_page-1)*num:(current_page)*num]:
         person_list=person.to_list()
         person_list[2]=[str(value) for value in person_list[2]]
         persons[person.id]={
@@ -57,6 +57,7 @@ def person(request,person_id):
 def answer_rate(request):
     response={}
     answer_rate={}
+    count=len(Question.objects.all())
     for question in Question.objects.all():
         answer_rate[question.number]={}
         for answer in question.answer_set.all():
@@ -66,6 +67,8 @@ def answer_rate(request):
             answer_rate[answer.question.number][str(answer)]=answer_rate[answer.question.number][str(answer)]+1
     response['columns']=[str(answer) for answer in Question.objects.all().first().answer_set.all()]
     response['answer_rate']=answer_rate
+    response['count']=count
     return JsonResponse(response)
         
-        
+def a(request,t,b):
+    return JsonResponse({'t':t,'b':b})

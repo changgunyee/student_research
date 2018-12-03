@@ -12,7 +12,7 @@
                 </td>
             </tr>
         </table>
-        <Pagination :count_data="count"></Pagination>
+        <Pagination :count="numOfPage"></Pagination>
     </div>
 </template>
 <script>
@@ -23,24 +23,25 @@ export default{
     return {
       columns:[],
       answer_rate:{},
-      count:0,
+      numOfPage:'',
+      currentPage:'',
     }
   },
   created(){
-      this.getAnswerRateData()
+      this.getAnswerRateData(1)
   },
   methods:{
-    getAnswerRateData(){
+    getAnswerRateData(currentPage){
       const config ={
          'content-type':'application/json',
          headers:{
            'Access-Control-Request-Headers': '',
            },
        }
-       return axios.get('http://54.180.115.81:8000/polls/answer_rate',config).then((response)=>{
+       return axios.get('http://54.180.115.81:8000/polls/'+currentPage,config).then((response)=>{
         this.answer_rate=response.data['answer_rate']
         this.columns=response.data['columns']
-        this.count=Object.keys(this.answer_rate).length
+        this.numOfPage=(response.data['count']/10)
       }).catch((e)=>{
         console.log(e)
       })

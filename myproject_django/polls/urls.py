@@ -3,7 +3,8 @@ from . import views
 
 app_name='polls'
 urlpatterns = [
-    path('upload',views.upload,name='upload'),
-    path('person/<int:person_id>',views.person,name='person'),
-    path('answer_rate',views.answer_rate,name='answer_rate'),
+    path('upload',views.upload),
+    path('person/page/<int:current_page>',views.person_by_page),
+    path('answer_rate',views.answer_rate),
+    path('a/<int:t><int:b>',views.a),
 ]
