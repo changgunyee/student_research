@@ -12,7 +12,7 @@
                 </td>
             </tr>
         </table>
-        <Pagination :count="numOfPage"></Pagination>
+        <Pagination :count="count" @changePageInter="changePage"></Pagination>
     </div>
 </template>
 <script>
@@ -23,7 +23,7 @@ export default{
     return {
       columns:[],
       answer_rate:{},
-      numOfPage:'',
+      count:'',
       currentPage:'',
     }
   },
@@ -41,10 +41,14 @@ export default{
        return axios.get('http://54.180.115.81:8000/polls/'+currentPage,config).then((response)=>{
         this.answer_rate=response.data['answer_rate']
         this.columns=response.data['columns']
-        this.numOfPage=(response.data['count']/10)
+        this.count=response.data['count']
       }).catch((e)=>{
         console.log(e)
       })
+    },
+    changePage(currentPage){
+        this.getAnswerRateData(currentPage)
+        this.currentPage=currentPage
     },
   },
   components:{
