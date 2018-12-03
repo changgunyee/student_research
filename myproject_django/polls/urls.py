@@ -8,7 +8,7 @@ urlpatterns = [
         path('<int:current_page>/',views.person_by_page),
         path('<int:current_page>-<int:num>',views.person_by_page),
     ])),
-    path('person/page/',include([
+    path('answer_rate/page/',include([
         path('<int:current_page>/',views.answer_rate_by_page),
         path('<int:current_page>-<int:num>',views.answer_rate_by_page),
     ])),
