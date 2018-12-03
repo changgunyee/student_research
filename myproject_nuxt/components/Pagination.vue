@@ -20,7 +20,7 @@ export default{
     },
     methods:{  
         changePage(event){
-          alert(event.target.tagName)
+          alert(event.currentTarget)
         },
     }
 }
