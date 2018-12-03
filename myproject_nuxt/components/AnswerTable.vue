@@ -21,8 +21,8 @@ import Pagination from '~/components/Pagination.vue'
 export default{
   data(){
       return {
+        count:'',
         currentPage:'',
-        numOfPage:'',
         columns:[],
         persons:{},
     }
