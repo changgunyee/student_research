@@ -20,7 +20,7 @@ export default{
     },
     methods:{  
         changePage(message,event){
-          alert(messange)
+          alert(message)
         },
     }
 }
