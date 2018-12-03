@@ -47,8 +47,8 @@ export default{
             console.log(e);
         })
       },
-      changePage(event){
-          alert(event)
+      changePage(message,event){
+          alert(message)
       }
   },
   components:{
