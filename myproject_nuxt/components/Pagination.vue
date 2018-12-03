@@ -7,20 +7,20 @@
 </template>
 <script>
 export default{
-    props:['count_data'],
+    props:['count'],
     data(){
         return {
-            count:this.count_data
+            numOfPage:this.count
         }
     },
     computed:{
         numOfPage(){
-            return parseInt(this.count/10)+1
+            return parseInt(this.numOfPage/10)+1
         },
     },
     watch:{
-        count_data(newVal){
-            this.count=newVal
+        count(newVal){
+            this.numOfPage=newVal
         }
     }
 }
