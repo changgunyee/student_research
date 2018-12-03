@@ -1,6 +1,6 @@
 <template>
     <tr>
-        <td v-for="page in numOfPage" :key="page.key" @click="changePage('abc',$event)">
+        <td v-for="page in numOfPage" :key="page.key" @click="changePage($event)">
             {{page}}
         </td>
     </tr>
