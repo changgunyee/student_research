@@ -12,7 +12,7 @@
                 <td v-for="answer in person.answers" :key="answer.key"> {{answer}}</td>
             </tr>
         </table>
-        <Pagination :count="numOfPage" @changePage="changePage2"></Pagination>
+        <Pagination :count="numOfPage" @changePageInter="changePage"></Pagination>
     </div>
 </template>
 <script>
@@ -47,10 +47,10 @@ export default{
             console.log(e);
         })
       },
-      changePage2(currentPage){
-          this.currentPage=currentPage
-          alert(currentPage)
-      }
+      changePage(currentPage){
+            getPersonData(currentPage)
+            this.currentPage=currentPage
+      },
   },
   components:{
       Pagination,

@@ -1,6 +1,6 @@
 <template>
     <tr>
-        <td v-for="page in numOfPage" :key="page.key" @click="changePageInter($event)">
+        <td v-for="page in numOfPage" :key="page.key" @click="changePage($event)">
             {{page}}
         </td>
     </tr>
@@ -19,8 +19,8 @@ export default{
         }
     },
     methods:{ 
-        changePageInter(event){
-          this.$emit("changePage",event.currentTarget.innerText)
+        changePage(event){
+          this.$emit("changePageInter",event.currentTarget.innerText)
         },
     }
 }
