@@ -47,6 +47,10 @@ export default{
             console.log(e);
         })
       },
+      changePage2(currentPage){
+          this.currentPage=currentPage
+          alert(currentPage)
+      }
   },
   components:{
       Pagination,
