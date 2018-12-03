@@ -38,7 +38,7 @@ export default{
             'Access-Control-Request-Headers': '',
             },
         }
-        return axios.get('http://54.180.115.81:8000/polls/person/'+currentPage+"-"+10,config).then((response)=>{
+        return axios.get('http://54.180.115.81:8000/polls/person/page/'+currentPage,config).then((response)=>{
             this.persons=response.data['persons']
             this.columns=response.data['columns']
             this.numOfPage=parseInt(response.data['count']/10)

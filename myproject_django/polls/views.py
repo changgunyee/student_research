@@ -34,11 +34,11 @@ def upload(request):
             person.save()
     return True
 
-def person_by_page(request,current_page,num):
+def person_by_page(request,current_page):
     response={}
     persons={}
     count=len(Person.objects.all())
-    for person in Person.objects.all()[(current_page-1)*num:(current_page)*num]:
+    for person in Person.objects.all()[(current_page-1)*10:(current_page)*10]:
         person_list=person.to_list()
         person_list[2]=[str(value) for value in person_list[2]]
         persons[person.id]={
