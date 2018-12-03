@@ -12,7 +12,7 @@
                 <td v-for="answer in person.answers" :key="answer.key"> {{answer}}</td>
             </tr>
         </table>
-        <Pagination :count="numOfPage" @click="changePage($event)"></Pagination>
+        <Pagination :count="numOfPage" ></Pagination>
     </div>
 </template>
 <script>
@@ -47,9 +47,6 @@ export default{
             console.log(e);
         })
       },
-      changePage(message,event){
-          alert(message)
-      }
   },
   components:{
       Pagination,

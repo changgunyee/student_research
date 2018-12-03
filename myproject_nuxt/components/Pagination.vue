@@ -1,6 +1,6 @@
 <template>
     <tr>
-        <td v-for="page in numOfPage" :key="page.key">
+        <td v-for="page in numOfPage" :key="page.key" @click="changePage('',$event)">
             {{page}}
         </td>
     </tr>
@@ -17,6 +17,11 @@ export default{
         count(newVal){
             this.numOfPage=newVal
         }
+    },
+    methods:{  
+        changePage(message,event){
+          alert(messange)
+        },
     }
 }
 </script>
