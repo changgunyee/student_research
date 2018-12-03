@@ -48,7 +48,7 @@ export default{
         })
       },
       changePage(currentPage){
-            getPersonData(currentPage)
+            this.getPersonData(currentPage)
             this.currentPage=currentPage
       },
   },
