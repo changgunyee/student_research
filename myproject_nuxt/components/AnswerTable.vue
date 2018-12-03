@@ -12,7 +12,7 @@
                 <td v-for="answer in person.answers" :key="answer.key"> {{answer}}</td>
             </tr>
         </table>
-        <Pagination :count="numOfPage" @click="changePage2(1)"></Pagination>
+        <Pagination :count="numOfPage" @changePage="changePage2"></Pagination>
     </div>
 </template>
 <script>
