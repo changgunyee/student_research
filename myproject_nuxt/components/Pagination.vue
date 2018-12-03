@@ -15,7 +15,7 @@ export default{
     },
     watch:{
         count(newVal){
-            this.numOfPage=newVal
+            this.numOfPage=parseInt((this.count-1)/10)+1
         }
     },
     methods:{ 
