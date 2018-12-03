@@ -48,6 +48,7 @@ export default{
       },
       firstPageLoaded(currentPage){
           getPersonData(currentPage)
+          currentPage=1
 
       }
   },
