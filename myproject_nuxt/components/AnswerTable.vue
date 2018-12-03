@@ -12,7 +12,7 @@
                 <td v-for="answer in person.answers" :key="answer.key"> {{answer}}</td>
             </tr>
         </table>
-        <Pagination :count="numOfPage" @changePageInter="changePage"></Pagination>
+        <Pagination :count="count" @changePageInter="changePage"></Pagination>
     </div>
 </template>
 <script>
@@ -41,7 +41,7 @@ export default{
         return axios.get('http://54.180.115.81:8000/polls/person/page/'+currentPage,config).then((response)=>{
             this.persons=response.data['persons']
             this.columns=response.data['columns']
-            this.numOfPage=parseInt(response.data['count']/10)
+            this.count=response.data['count']
             this.currentPage=1
         }).catch((e)=>{
             console.log(e);

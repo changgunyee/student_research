@@ -10,7 +10,7 @@ export default{
     props:['count'],
     data(){
         return {
-            numOfPage:this.count
+            numOfPage:parseInt((this.count-1)/10)+1
         }
     },
     watch:{
