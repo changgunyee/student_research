@@ -36,23 +36,23 @@ def upload(request):
 
 def person(request,person_id):
     response={}
-    if person_id == 0:
-        persons={}
-        for person in Person.objects.all():
-            person_list=person.to_list()
-            person_list[2]=[str(value) for value in person_list[2]]
-            persons[person.id]={
-                "name":person_list[0],
-                "email":person_list[1],
-                "answers":person_list[2]
-                }
-        response['persons']=persons
-        columns=['name','email']
-        for question in Question.objects.all().order_by('number'):
-            columns.append(str(question.number))
-        response['columns']=columns
-        return JsonResponse(response)
-    return JsonResponse({})
+    persons={}
+    count=len(Person.objects.all())
+    for person in Person.objects.all()[(person_id-1)*10:(person_id)*10]:
+        person_list=person.to_list()
+        person_list[2]=[str(value) for value in person_list[2]]
+        persons[person.id]={
+            "name":person_list[0],
+            "email":person_list[1],
+            "answers":person_list[2]
+            }
+    response['persons']=persons
+    columns=['name','email']
+    for question in Question.objects.all().order_by('number'):
+        columns.append(str(question.number))
+    response['columns']=columns
+    response['count']=count
+    return JsonResponse(response)
 
 def answer_rate(request):
     response={}
