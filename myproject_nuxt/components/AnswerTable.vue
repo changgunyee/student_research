@@ -21,14 +21,14 @@ import Pagination from '~/components/Pagination.vue'
 export default{
   data(){
       return {
-        currentPage:1,
+        currentPage:'',
         numOfPage:'',
         columns:[],
         persons:{},
     }
   },
   created(){
-      this.getPersonData(currentPage)
+      this.getPersonData(1)
   },
   methods:{
       getPersonData(currentPage){
@@ -42,6 +42,7 @@ export default{
             this.persons=response.data['persons']
             this.columns=response.data['columns']
             this.numOfPage=parseInt(response.data['count']/10)
+            this.currentPage=1
         }).catch((e)=>{
             console.log(e);
         })
