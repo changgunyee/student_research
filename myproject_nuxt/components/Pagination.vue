@@ -13,11 +13,11 @@ export default{
             numOfPage:this.count
         }
     },
-    computed:{
-        numOfPage(){
-            return parseInt(this.numOfPage/10)+1
-        },
-    },
+//    computed:{
+//        numOfPage(){
+//            return parseInt(this.numOfPage/10)+1
+//        },
+ //   },
     watch:{
         count(newVal){
             this.numOfPage=newVal
