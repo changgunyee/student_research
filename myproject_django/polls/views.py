@@ -54,11 +54,11 @@ def person_by_page(request,current_page,num=10):
     response['count']=count
     return JsonResponse(response)
 
-def answer_rate(request):
+def answer_rate_by_page(request,current_page,num=10):
     response={}
     answer_rate={}
     count=len(Question.objects.all())
-    for question in Question.objects.all():
+    for question in Question.objects.all()[(current_page-1)*num:(current_page)*num]:
         answer_rate[question.number]={}
         for answer in question.answer_set.all():
             answer_rate[question.number][str(answer)]=0
