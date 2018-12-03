@@ -20,7 +20,7 @@ export default{
  //   },
     watch:{
         count(newVal){
-            numOfPage=newVal
+            this.numOfPage=newVal
         }
     }
 }
