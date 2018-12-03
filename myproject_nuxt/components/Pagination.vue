@@ -19,8 +19,8 @@ export default{
         }
     },
     methods:{  
-        changePage(message,event){
-          alert(message)
+        changePage(event){
+          alert(event.target.tagName)
         },
     }
 }
