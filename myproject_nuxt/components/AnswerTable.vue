@@ -28,7 +28,7 @@ export default{
     }
   },
   created(){
-      getPersonData(currentPage)
+      this.getPersonData(currentPage)
   },
   methods:{
       getPersonData(currentPage){
